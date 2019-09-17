@@ -34,11 +34,23 @@ VPS Hostinger plan 2
 - Transfer: 2TB
 - Almacenamiento: 40GB
 
-Precio: $8.95/mes
+Precio: $19.95/mes
 
-**Hostinger**: $10 * 12 meses = $120/año
+**DigitalOcean**: $10 * 12 meses = $120/año
 
-**DigitalOcean**: $8.95 * 12 meses = $107.4/año
+**Hostinger**: $19.95 * 12 meses = $239.4/año
+
+**Si se usaran un 1%:**
+
+**DigitalOcean** 1.2€/año
+
+**Hostinger** 2.394€/año
+
+**Si se usaran un 10%:**
+
+**DigitalOcean** 12.0€/año
+
+**Hostinger** 23.94€/año
 
 
 ## Virtualización a nivel de hardware
@@ -62,7 +74,18 @@ Una máquina virtual con sistema operativo Kali Linux muestra las siguientes fla
 
 1. Comprobar si el núcleo instalado en tu ordenador contiene este módulo del kernel usando la orden kvm-ok. Alternativamente (o además), usar lscpu como se indica arriba.
 
+  No dispongo de la orden `kvm-ok` asi que para comprobar si el procesador (en mi caso Intel) soporta virtualización por kernel he usado la siguiente orden: `grep --color vmx /proc/cpuinfo`.
+
+  ![Comprobar virtualización](capturas/ejerc1-4-2.png)
+
+  Alternativamente, se podía usar perfectamente el comando `lscpu`.
+
 2. Instalar un hipervisor para gestionar máquinas virtuales, que más adelante se podrá usar en pruebas y ejercicios.
+
+  Tengo instalado Oracle VirtualBox, ya que lo hemos usado en varias asignaturas.
+
+  ![Hipervisor](capturas/hypervisor.png)
+
 
 ## Niveles y tipos de infraestructura virtual
 
@@ -70,6 +93,6 @@ Una máquina virtual con sistema operativo Kali Linux muestra las siguientes fla
 
 Darse de alta en servicios de nube usando ofertas gratuitas o cupones que pueda proporcionar el profesor.
 
-**Ejercicio 6**
+Me he registrado en Microsoft Azure con el cupón que proporciona el plan de estudiante de Github.
 
-Darse de alta en una web que permita hacer pruebas con alguno de los sistemas de gestión de nube anteriores.
+He elegido Microsoft Azure porque permite registrarse sin asociar una tarjeta de crédito a la cuenta, al contrario de lo que sucede con DigitalOcean, que había sido mi elección en un comienzo.
